@@ -1,0 +1,9 @@
+1443647656261	Encapsulate field 'name'
+1443647687377	Encapsulate field 'price'
+1443647786551	Rename type 'GenericGood'
+1443647854534	Extract interface 'GenericGood'
+1443648226121	Copy compilation unit
+1443648241607	Delete element
+1443648252194	Copy compilation unit
+1443648275773	Copy compilation unit
+1443653745759	Encapsulate field 'salesTax'

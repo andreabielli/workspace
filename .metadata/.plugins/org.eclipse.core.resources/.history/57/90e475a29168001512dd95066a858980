@@ -1,0 +1,71 @@
+package com.lastminute;
+
+public class GenericGoodImpl implements GenericGood {
+
+	private Integer salesTax=Integer.valueOf(10);
+	private static final Integer importTax=Integer.valueOf(5);
+	private String name;
+	private double price;
+	
+
+	private boolean imported;
+	
+	public GenericGoodImpl(String name, double price, boolean imported) {
+		
+		this.name=name;
+		this.price=price;
+		this.imported=imported;
+
+	}
+	
+	/* (non-Javadoc)
+	 * @see com.lastminute.GenericGood#getName()
+	 */
+	public String getName() {
+		return name;
+	}	
+
+	/* (non-Javadoc)
+	 * @see com.lastminute.GenericGood#getPrice()
+	 */
+	public double getPrice() {
+		
+		double finalPrice=this.price;
+		
+		if(this.getSalesTax()!=null){
+						
+			double realTax=Math.floor(((finalPrice*(this.getSalesTax()+((imported) ? importTax:0)))/100)*1e2)/1e2;
+			double truncTax=Math.floor(realTax * 1e2) / 1e2;
+			int roundTax=(int) (truncTax*100);
+			
+			while(true)
+			{
+				if(roundTax%5==0){
+					
+					finalPrice+=((double)roundTax/100);
+					break;
+				}
+				else{
+					
+					roundTax+=1;
+				}
+			}
+			
+			
+			
+		}
+		
+		
+		
+		return Math.floor(finalPrice*1e2)/1e2;
+	}
+	
+	public double getTotalTax(){
+		
+		return getPrice()-this.price;
+	}
+	public Integer getSalesTax() {
+		return salesTax;
+	}
+	
+}

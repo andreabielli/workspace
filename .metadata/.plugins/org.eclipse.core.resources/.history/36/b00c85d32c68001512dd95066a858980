@@ -1,0 +1,66 @@
+package com.lastminute;
+
+import junit.framework.Test;
+import junit.framework.TestCase;
+import junit.framework.TestSuite;
+
+/**
+ * Unit test for simple App.
+ */
+public class AppTest 
+    extends TestCase
+{
+    /**
+     * Create the test case
+     *
+     * @param testName name of the test case
+     */
+    public AppTest( String testName )
+    {
+        super( testName );
+    }
+
+    /**
+     * @return the suite of tests being tested
+     */
+    public static Test suite()
+    {
+        return new TestSuite( AppTest.class );
+    }
+
+    /**
+     * Rigourous Test :-)
+     */
+    public void testApp()
+    {
+        Books book = new Books("book", 12.49, false);
+        assertNotNull(book);
+        GenericGoodImpl good= new GenericGoodImpl("music CD", 14.99, false);
+        assertNotNull(good);
+        Food food= new Food("chocolate bar", 0.85, false);
+        assertNotNull(food);
+        
+        System.out.println("Output 1\n");
+        System.out.println("1 "+book.getName()+":"+book.getPrice());
+        System.out.println("1 "+good.getName()+":"+good.getPrice());
+        System.out.println("1 "+food.getName()+":"+food.getPrice());
+        double totTax =book.getTotalTax()+good.getTotalTax()+food.getTotalTax();
+        System.out.println("Sales Taxes "+totTax);
+        double total=book.getPrice()+good.getPrice()+food.getPrice();
+        System.out.println("Total "+tot);
+        
+        good= new GenericGoodImpl("bottle of perfume", 47.50, true);
+        assertNotNull(good);
+        food= new Food("box of chocolates", 10, true);
+        assertNotNull(food);
+        
+        System.out.println("Output 2\n");
+        System.out.println("1 "+food.getName()+":"+food.getPrice());
+        System.out.println("1 "+good.getName()+":"+good.getPrice());
+        tot =good.getTotalTax()+food.getTotalTax();
+        System.out.println("Sales Taxes "+tot);
+        
+        
+    	assertTrue( true );
+    }
+}

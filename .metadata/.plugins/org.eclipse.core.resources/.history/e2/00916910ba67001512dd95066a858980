@@ -1,0 +1,14 @@
+package com.lastminute;
+
+public class Food extends GenericGoodImpl {
+
+	private int salesTax=0;
+	private static final int price=1;
+	
+	public Food(String name) {
+		super(name);
+	}
+		
+	
+
+}

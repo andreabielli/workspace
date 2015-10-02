@@ -1,0 +1,9 @@
+package com.lastminute;
+
+public interface Food {
+
+	public String getName();
+
+	public String getPrice();
+
+}

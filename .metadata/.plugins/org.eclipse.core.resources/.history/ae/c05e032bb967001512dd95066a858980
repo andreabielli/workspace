@@ -1,0 +1,16 @@
+package com.lastminute;
+
+public class Books extends GenericGoodImpl {
+
+	private int salesTax=0;
+	
+	
+	public Books() {
+		// TODO Auto-generated constructor stub
+	}
+
+	
+	
+	
+
+}

@@ -1,0 +1,9 @@
+package com.lastminute;
+
+public class Books extends GenericGood {
+
+	public Books() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

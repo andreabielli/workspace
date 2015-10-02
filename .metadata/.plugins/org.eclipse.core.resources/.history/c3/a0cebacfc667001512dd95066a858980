@@ -1,0 +1,14 @@
+package com.lastminute;
+
+public class Medical extends GenericGoodImpl {
+
+	private static final Integer salesTax=Integer.valueOf(0);
+
+	
+	public Medical(String name,double price,boolean imported) {
+		super(name,price,imported);
+	}
+		
+	
+
+}

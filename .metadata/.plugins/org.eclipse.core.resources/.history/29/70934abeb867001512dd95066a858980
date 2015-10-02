@@ -1,0 +1,9 @@
+package com.lastminute;
+
+public interface GenericGood {
+
+	public abstract String getName();
+
+	public abstract String getPrice();
+
+}

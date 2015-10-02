@@ -1,0 +1,14 @@
+package com.lastminute;
+
+public class Books extends GenericGoodImpl {
+
+	private int salesTax=0;
+	private int price;
+	
+	public Books(String name, String price) {
+		super(name,price);
+	}
+		
+	
+
+}
